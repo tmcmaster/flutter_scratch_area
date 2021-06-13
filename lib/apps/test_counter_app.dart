@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-// application entry
-void main() => runApp(MyApp());
-
 class MyApp extends StatelessWidget {
+  static Widget create() => MyApp();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Apply home route
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Counter App'),
     );
   }
 }

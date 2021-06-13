@@ -3,11 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:graphview/GraphView.dart';
 
-void main() {
-  runApp(MyApp());
-}
+class GraphViewDemo extends StatelessWidget {
+  static Widget create() => GraphViewDemo();
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
         home: TreeViewPage(),

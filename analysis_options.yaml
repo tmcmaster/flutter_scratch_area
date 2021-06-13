@@ -10,7 +10,11 @@ inclide: package:lint/analysis_options.yaml
 # linter:
 #   rules:
 #     - camel_case_types
+# For list of options see: https://dart-lang.github.io/linter/lints/
 
+linter:
+  rules:
+    prefer_const_declarations: true
 
 analyzer:
   exclude:

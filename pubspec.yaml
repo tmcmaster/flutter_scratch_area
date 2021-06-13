@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.0.0-nullsafety.0
   graphview: ^1.0.0-nullsafety.1
+  args:
 
 dev_dependencies:
   flutter_test:
