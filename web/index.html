@@ -26,7 +26,7 @@
   <title>flutter_scratch_area</title>
   <link rel="manifest" href="manifest.json">
 </head>
-<body>
+<body onunload="javascript:alert('Beep!');" onbeforeonload="javascript:return confirm('I beep first. Continue?');">
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->

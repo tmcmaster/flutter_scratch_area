@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_scratch_area/widgets/scratch_area/view_pane.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_scratch_area/widgets/scratch_area/widget_tester.dart';
 
 class ScratchArea extends StatelessWidget {
   static Widget create() => ScratchArea();
@@ -19,17 +20,24 @@ class ScratchArea extends StatelessWidget {
           appBar: AppBar(
             title: const Text(title),
           ),
-          body: ViewPane(
-            width: 100,
-            height: 500,
-            child: Text(
-              'Push the button to do an action.',
+          body: ProviderScope(
+            child: Container(
+              margin: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.purple),
+              ),
+              child: Column(
+                children: [
+                  WidgetTester(
+                    child: Text('Push the button to do an action.'),
+                  ),
+                  WidgetTester(
+                    child: Text('Push the button to do an action.'),
+                  )
+                ],
+              ),
             ),
-          ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            tooltip: 'Do Action',
-            child: Icon(Icons.add),
           ),
         ),
       ),
