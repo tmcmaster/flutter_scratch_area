@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  static Widget create() => MyApp();
+class CounterApp extends StatelessWidget {
+  static Widget create() => CounterApp();
 
   @override
   Widget build(BuildContext context) {
@@ -12,21 +12,21 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // Apply home route
-      home: MyHomePage(title: 'Counter App'),
+      home: CounterAppPage(title: 'Counter App'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class CounterAppPage extends StatefulWidget {
+  CounterAppPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _CounterAppPageState createState() => _CounterAppPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CounterAppPageState extends State<CounterAppPage> {
   int _counter = 0;
 
   void _incrementCounter() {
