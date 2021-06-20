@@ -1,22 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CookingScreenCurrentTask extends StatelessWidget {
+class CookingScreenUpNext extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    const numberOfCurrentTasks = 3;
-
     return Column(
       children: [
         Row(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(30, 0, 0, 10),
+              padding: EdgeInsets.fromLTRB(30, 10, 0, 40),
               color: Colors.white,
               child: Text(
-                'CURRENT TASK',
-                style: theme.textTheme.headline3,
+                'UP NEXT',
+                style: theme.textTheme.headline3!.copyWith(color: Colors.grey[300]),
+              ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Container(
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+              color: Colors.white,
+              child: Text(
+                'Gathering ingredients',
+                style: theme.textTheme.subtitle1,
               ),
             ),
           ],
@@ -24,44 +34,45 @@ class CookingScreenCurrentTask extends StatelessWidget {
         Container(
           padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
           //decoration: BoxDecoration(border: Border.all(color: theme.colorScheme.primary)),
-          color: theme.colorScheme.primaryVariant,
+          color: Colors.white,
           child: Column(
             children: [
-              ...Iterable.generate(numberOfCurrentTasks)
+              ...Iterable.generate(5)
                   .map((i) => Container(
                         decoration: BoxDecoration(
-                          color: (i == 0
-                              ? Colors.white
-                              : Colors.white.withOpacity(0.5 - (i / (numberOfCurrentTasks * 2)))),
+                          color: Colors.grey[(i < 1 ? 200 : (i < 2 ? 100 : 50))],
                           borderRadius: BorderRadius.all(
-                            Radius.circular(7),
+                            Radius.circular(5),
                           ),
                         ),
                         margin: EdgeInsets.fromLTRB(2, 0, 0, 2),
                         child: ListTile(
                           selected: (i == 0),
                           enabled: i > 0,
-                          tileColor: theme.colorScheme.primaryVariant,
+                          tileColor: Colors.grey,
                           selectedTileColor: Colors.white,
                           title: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 'item ${i + 1}',
-                                style: theme.textTheme.bodyText1!.copyWith(color: Colors.black),
+                                style: theme.textTheme.bodyText1!.copyWith(color: Colors.grey),
                               ),
                               TextButton(
                                 onPressed: () => {},
                                 child: Container(
                                   padding: EdgeInsets.fromLTRB(15, 8, 15, 8),
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: theme.colorScheme.primaryVariant, width: 3),
-                                    color: Colors.white,
+                                    border: Border.all(color: Colors.grey.shade400, width: 2),
+                                    color: Colors.grey.shade50,
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(15),
                                     ),
                                   ),
-                                  child: Text('Done'),
+                                  child: Text('Done',
+                                      style: theme.textTheme.headline3!.copyWith(
+                                        color: Colors.grey.shade400,
+                                      )),
                                 ),
                               ),
                             ],

@@ -82,15 +82,15 @@ abstract class CookingScreenStyle {
       ),
     ),
     ThemeBuilderStyle(
-      name: 'blue',
+      name: 'purple',
       theme: ThemeData(
         brightness: Brightness.light,
-        primarySwatch: Colors.lightBlue,
+        primarySwatch: Colors.purple,
         textTheme: _sharedTheme.textTheme,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
         textTheme: _sharedTheme.textTheme,
       ),
     ),

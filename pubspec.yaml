@@ -24,18 +24,26 @@ dependencies:
   grouped_list: ^4.0.0
 
   widget_tester:
-    git:
-      url: https://github.com/tmcmaster/widget_tester.git
+    path: ../widget_tester
   screen_tester:
-    git:
-      url: https://github.com/tmcmaster/screen_tester.git
+    path: ../screen_tester
   theme_builder:
-    git:
-      url: https://github.com/tmcmaster/theme_builder.git
+    path: ../theme_builder
   flutter_workbench:
-    git:
-      url: https://github.com/tmcmaster/flutter_workbench.git
+    path: ../flutter_workbench
 
+#  widget_tester:
+#    git:
+#      url: https://github.com/tmcmaster/widget_tester.git
+#  screen_tester:
+#    git:
+#      url: https://github.com/tmcmaster/screen_tester.git
+#  theme_builder:
+#    git:
+#      url: https://github.com/tmcmaster/theme_builder.git
+#  flutter_workbench:
+#    git:
+#      url: https://github.com/tmcmaster/flutter_workbench.git
 
 dev_dependencies:
   flutter_test:
