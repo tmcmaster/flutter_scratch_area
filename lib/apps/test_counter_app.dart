@@ -46,7 +46,7 @@ class _CounterAppPageState extends State<CounterAppPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Button Pressed Count',
             ),
             Text(
               '$_counter',

@@ -11,15 +11,15 @@ void main() {
   //   styles: CookingScreenStyle.themes,
   //   child: CookingScreenCurrentTask(),
   // );
-  FlutterWorkbench.runScreenTesterApp(
+  FlutterWorkbench.runAppScreenTester(
     title: 'Cooking Screen',
     styles: CookingScreenStyle.themes,
     options: ScreenTesterOptions(
       device: Devices.ios.iPhone11,
       //image: 'assets/images/cooking_screen_green.png',
-      //styledImage: 'assets/images/cooking_screen_%s.png',
+      styledImage: 'assets/images/cooking_screen_%s.png',
       scale: 1.08,
-      opacity: 0.5,
+      opacity: 1,
     ),
     child: CookingScreen(),
   );

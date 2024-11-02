@@ -8,7 +8,6 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
-
 flutter:
   uses-material-design: true
   assets:
@@ -22,23 +21,15 @@ dependencies:
   graphview: ^1.0.0-nullsafety.1
   flutter_riverpod:
   grouped_list: ^4.0.0
-
-  widget_tester:
-#    path: ../widget_tester
-    git:
-      url: https://github.com/tmcmaster/widget_tester.git
-  screen_tester:
-#    path: ../screen_tester
-    git:
-      url: https://github.com/tmcmaster/screen_tester.git
-  theme_builder:
-#    path: ../theme_builder
-    git:
-      url: https://github.com/tmcmaster/theme_builder.git
+  desktop_window: ^0.4.0
+  camera:
   flutter_workbench:
-#    path: ../flutter_workbench
-    git:
-      url: https://github.com/tmcmaster/flutter_workbench.git
+    path: ../flutter_workbench
+  flutter_mobile_vision: ^0.1.4+1
+  path_provider:
+  path:
+  camerawesome: ^0.3.0+1
+  image:
 
 dev_dependencies:
   flutter_test:
